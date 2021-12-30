@@ -5,7 +5,7 @@ Statistical Parsing for Tree Wrapping Grammars with Transformer-based supertaggi
 
 Install [ParTAGe-TWG](https://github.com/kawu/partage-twg).
 
-__Optionally, you can also install [discodop](https://github.com/andreasvc/disco-dop)__ This package is used as a library stored in folder discodop_n. 
+_Optionally, you can also install [discodop](https://github.com/andreasvc/disco-dop) This package is used as a library stored in folder discodop_n._
 
 Also install the packages from the requirements.txt file. 
 
