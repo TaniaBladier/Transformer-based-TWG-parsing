@@ -27,7 +27,7 @@ language_model = NERModel(
 
 ## Parse sentences
 
-Parse a file with sentences using the following command:
+Parse a file with sentences using the file reuse_saved_model, for example:
 
 ```
 python reuse_saved_model.py example_input_file.txt example_output_file.txt
