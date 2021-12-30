@@ -167,11 +167,11 @@ with open(inp_file, "r") as inf:
                 for t, s, c in incrementaltreereader(x):
                     l = len(t.leaves())
                     if len(sent) == l:
-                        outfile.write(x.replace("-LRB-", "(").replace("-RRB-", ")"))
+                        outfile.write(x.replace("-LRB-", "(").replace("-RRB-", ")") + '\n')
                     else:
-                        outfile.write('WRONG LEAVES: ' + line)
+                        outfile.write('WRONG LEAVES: ' + line + '\n')
             except:
-                outfile.write('NO PARSE: ' + line)
+                pass
 
             
 outfile.close()
