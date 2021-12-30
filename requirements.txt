@@ -1,0 +1,13 @@
+Cython==0.29.24
+huggingface-hub==0.0.17
+matplotlib==2.1.1
+multiprocess==0.70.12.2
+nlp==0.2.0
+numpy==1.19.5
+pandas==1.1.5
+scikit-learn==0.19.1
+scipy==1.0.0
+simpletransformers==0.61.9
+subprocess32==3.5.4
+torch==1.9.1
+transformers==2.11.0
