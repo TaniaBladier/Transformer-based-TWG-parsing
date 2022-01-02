@@ -40,8 +40,9 @@ Parse a file with sentences using the file parse_twg.
 
 It takes two arguments - input file with plain sentences and output file. 
 
-Please take a look at the example files:
+Please take a look at the example [input](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_input_file.txt) and [output](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_output_file.txt) files:
 
 ```
 python parse_twg.py example_input_file.txt example_output_file.txt
 ```
+The output format of the output file is discbracket (discontinuous bracket trees). Read more about this format [here](https://discodop.readthedocs.io/en/latest/fileformats.html).
