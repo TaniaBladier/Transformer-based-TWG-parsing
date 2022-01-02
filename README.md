@@ -15,7 +15,7 @@ The code works with the Python version 3.9
 
 Download a language model from the [RRG parser website](https://rrgparser.phil.hhu.de/parser/downloads).
 
-Unzip the downloaded model and rename the folder to "best_model". 
+Unzip the downloaded model and rename the folder with the unzipped model to "best_model". 
 
 Please note that for the French model you need to rename the model name from "bert" to "camembert":
 
