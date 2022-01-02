@@ -25,9 +25,22 @@ language_model = NERModel(
 )
 ```
 
+To use DistilBERT model, rename the model name from "bert" to "distilbert":
+
+
+```
+language_model = NERModel(
+    "distilbert", "best_model", use_cuda=device 
+)
+```
+
 ## Parse sentences
 
-Parse a file with sentences using the file parse_twg, for example:
+Parse a file with sentences using the file parse_twg. 
+
+It takes two arguments - input file with plain sentences and output file. 
+
+Please take a look at the example files:
 
 ```
 python parse_twg.py example_input_file.txt example_output_file.txt
