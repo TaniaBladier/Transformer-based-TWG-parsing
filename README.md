@@ -7,8 +7,6 @@ This the repository for the experiments for the LREC 2022 submission.
 
 Install [ParTAGe-TWG](https://github.com/kawu/partage-twg).
 
-_Optionally, you can also install [discodop](https://github.com/andreasvc/disco-dop). This package is used as a library stored in folder discodop_n._
-
 Also install the packages from the requirements.txt file. 
 
 The code works with the Python version 3.9
@@ -24,8 +22,24 @@ Here is the list of language models described in LREC paper:
 - Russian Model:	Fine-tuned rubert-base-cased-sentence model	[download (1.4 GB)](https://www.dropbox.com/s/39gp9q04pbar6vw/best_model_ru.zip?dl=0)
 - Multilingual DistilBERT:	Fine-tuned distilbert-base-multilingual-cased model	[download (1 GB)](https://www.dropbox.com/s/jyg8lgop5v0bktt/best_model_distilbert.zip?dl=0)
 
+### Use downloaded model
 
 Unzip the downloaded model and rename the folder with the unzipped model to "best_model". 
+
+
+## Parse sentences
+
+Parse a file with sentences using the file parse_twg. 
+
+It takes two arguments - input file with plain sentences and output file. 
+
+
+Please take a look at the example [input](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_input_file.txt) and [output](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_output_file.txt) files:
+
+```
+python parse_twg.py example_input_file.txt example_output_file.txt
+```
+The output format of the output file is discbracket (discontinuous bracket trees). Read more about this format [here](https://discodop.readthedocs.io/en/latest/fileformats.html).
 
 Please note that for the French model you need to rename the model name from "bert" to "camembert":
 
@@ -43,16 +57,3 @@ language_model = NERModel(
     "distilbert", "best_model", use_cuda=device 
 )
 ```
-
-## Parse sentences
-
-Parse a file with sentences using the file parse_twg. 
-
-It takes two arguments - input file with plain sentences and output file. 
-
-Please take a look at the example [input](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_input_file.txt) and [output](https://github.com/TaniaBladier/Transformer-based-TWG-parsing/blob/main/example_output_file.txt) files:
-
-```
-python parse_twg.py example_input_file.txt example_output_file.txt
-```
-The output format of the output file is discbracket (discontinuous bracket trees). Read more about this format [here](https://discodop.readthedocs.io/en/latest/fileformats.html).
