@@ -1,7 +1,7 @@
 # Transformer-based-TWG-parsing
 Statistical Parsing for Tree Wrapping Grammars with Transformer-based supertagging and A-star parsing
 
-This the repository for the experiments for the LREC 2022 submission.
+This the repository for the experiments for the LREC 2022 submission with the title "RRGparbank: A Parallel Role and Reference Grammar Treebank"
 
 ## Installation
 
