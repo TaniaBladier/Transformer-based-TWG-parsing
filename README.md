@@ -39,7 +39,7 @@ Please take a look at the example [input](https://github.com/TaniaBladier/Transf
 ```
 python parse_twg.py example_input_file.txt example_output_file.txt
 ```
-The output format of the output file is discbracket (discontinuous bracket trees). Read more about this format [here](https://discodop.readthedocs.io/latest/).
+The output format of the output file is discbracket (discontinuous bracket trees). Read more about this format [here](https://discodop.readthedocs.io/latest/fileformats.html).
 
 Please note that for the French model you need to rename the model name from "bert" to "camembert":
 
