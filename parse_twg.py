@@ -106,7 +106,7 @@ def partage_parse_supertag_file(filepath):
             produce_bracketed, shell=True).decode('UTF-8')
         output_supertags = subprocess.check_output(
             produce_supertagged, shell=True).decode('UTF-8')
-        output_bracketed = [s for s in output_bracketed.split('\n\n') if len(s) > 0]
+        output_bracketed = [s for s in output_bracketed.split('\n') if len(s) > 0]
         pparses_supertags.append(output_supertags.strip())
         for par in output_bracketed:
             par = par.strip()
@@ -159,7 +159,6 @@ def xlnetsupertagging_en(sentences):
 with open(inp_file, "r") as inf:
     for line in inf:
         sent = line.replace("(", '-LRB-').replace(")", "-RRB-").strip().split(" ")
-        #print(len(sent), sent)
         pp_br, pp_st = xlnetsupertagging_en([sent])
         for x in pp_br:
             x = x.strip()
@@ -167,12 +166,13 @@ with open(inp_file, "r") as inf:
                 for t, s, c in incrementaltreereader(x):
                     l = len(t.leaves())
                     if len(sent) == l:
-                        outfile.write(x.replace("-LRB-", "(").replace("-RRB-", ")") + '\n')
+                        outfile.write("\n".join(pp_st).replace("-LRB-", "(").replace("-RRB-", ")") + "\n")
+                        outfile.write(x + '\n\n')
                     else:
-                        outfile.write('WRONG LEAVES: ' + line + '\n')
+                        pass
+                        #outfile.write('WRONG LEAVES: ' + line + '\n')
             except:
                 pass
 
             
 outfile.close()
-
